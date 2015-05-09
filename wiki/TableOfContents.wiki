@@ -6,16 +6,6 @@
      * [CustomAccessors Custom accessor methods]
         * [CustomAccessors#Annotation Annotation]
         * [CustomAccessors#XML XML]
-   * XML
-     * [XSD Xml Schema]
-     * [XmlHandling Xml handling]
-   * Relations
-     * [ImplicitRelations Implicit relations]
-       * [ImplicitRelations#Many_to_One Many to One]
-       * [ImplicitRelations#One_to_Many One to Many]
-     * [ExplicitRelations Explicit relations]
-       * [ExplicitRelations#Many_to_One Many to One]
-       * [ExplicitRelations#One_to_Many One to Many]
    * creation/enrichment
      * [Enumerations Enumerations]
        * [Enumerations#NullPointerControl NullPointerControl]
@@ -29,11 +19,21 @@
      * [oneToMany OneToMany]
        * [oneToMany#Creation_signatures Creation signatures]
        * [oneToMany#Enrichment_signatures Enrichment signatures]
+   * Relations
+     * [ImplicitRelations Implicit relations]
+       * [ImplicitRelations#Many_to_One Many to One]
+       * [ImplicitRelations#One_to_Many One to Many]
+     * [ExplicitRelations Explicit relations]
+       * [ExplicitRelations#Many_to_One Many to One]
+       * [ExplicitRelations#One_to_Many One to Many]
    * Conversions
      * [ImplicitConversions Implicit conversions]
      * [ExplicitConversions Explicit conversions]
        * [ExplicitConversions#Static_conversion Static conversion]
        * [ExplicitConversions#Dynamic_conversion Dynamic conversion]
+   * XML
+     * [XSD Xml Schema]
+     * [XmlHandling Xml handling]
    * Examples
      * [AdvancedEnumerationExamples Enumerations usage]
      * [GlobalMappingExamples Global mapping]
@@ -42,9 +42,6 @@
      * [AdvancedInheritanceExamples Inherited configurations]
    * [MoreInformations More informations]
    * [PerformanceTests Performance tests]
- * Configurations
-   * [SpringConfiguration Spring]
-   * [MavenConfiguration Maven]
  * [FutureRelease Future Release]
  * [ReleaseNotes Release Notes]
  * [Support Support]
