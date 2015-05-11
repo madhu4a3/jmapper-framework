@@ -4,9 +4,9 @@ With the 1.3.2 version:
 
 Will be added placeholders get and set for dynamic methods:
 
-{{{${source.get}}}} get method for source field
-{{{${source.set}}}} set method for source field
-{{{${destination.get}}}}  get method for destination field
-{{{${destination.set}}}}  set method for destination field
+{{{${source.get}}}} get method for source field<br>
+{{{${source.set}}}} set method for source field<br>
+{{{${destination.get}}}}  get method for destination field<br>
+{{{${destination.set}}}}  set method for destination field<br>
 
 This allows us to implement interesting functions as: flatten and projection
