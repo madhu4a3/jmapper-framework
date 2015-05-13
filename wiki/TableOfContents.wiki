@@ -40,7 +40,7 @@
      * [AdvancedExamples Relational mapping]
      * [AdvancedConversionExamples Explicit conversion]
      * [AdvancedInheritanceExamples Inherited configurations]
-     * [FlattenExpand Flatten and Expand]
+     * [FlattenExpand Flatten and Encapsulate]
    * [MoreInformations More informations]
    * [PerformanceTests Performance tests]
  * [FutureRelease Future Release]
