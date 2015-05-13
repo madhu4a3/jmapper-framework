@@ -1,13 +1,90 @@
 #summary An example of flatten and expand with the placeholders get and set.
 
-= Introduction =
+= How to flatten and expand an infinite number of fields with few line of code =
 
-Add your content here.
+With 1.3.2 release it's possible to use get and set placeholders for destination and source, but what's the advantages of this new feature?<br>
+The following is a quick example, i have two beans:
+{{{
+public class Flatten {
 
+	private User user;
+	
+        // getter and setter..
 
-= Details =
+	public static class User {
+		
+		private String name;
+		private String surname;
+		private String address;
+		private String number;
+                
+                // getter and setter..
+        }
+}
+}}}
+And
+{{{
+public class Expand {
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+	private String name;
+	private String surname;
+	private String address;
+	private String number;
+
+        //getter and setter..
+}
+}}}
+My purpose is to map Flatten in Expand and viceversa.<br>
+With any mapper you are obliged to define every relationship, in this case:
+
+user.name = name<br>
+user.surname = surname<br>
+etc..
+
+With JMapper all you need are two methods that define a mapping for each direction:
+{{{
+@JGlobalMap("user")
+public class Expand {
+
+	private String name;
+	private String surname;
+	private String address;
+	private String number;
+
+	@JMapConversion(from={"name","surname","address","number"},type=Type.DYNAMIC,avoidSet=true)
+	public static String fromDestConversion(){
+		return "${destination}.${source.set}(${source});";
+	}
+	
+	@JMapConversion(from={"user"},type=Type.DYNAMIC,avoidSet=true)
+	public static String fromSourceConversion(){
+		return "${destination} = ${source}.${destination.get}();";
+	}
+
+        //getter and setter..
+}
+}}}
+or in XML:
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<jmapper xmlns="https://jmapper-framework.googlecode.com"
+	xmlns:xsi="https://jmapper-framework.googlecode.com/svn"
+	xsi:noNamespaceSchemaLocation="https://jmapper-framework.googlecode.com/svn/jmapper-1.3.1.xsd">
+
+	<class name="com.googlecode.jmapper.integrationtest.others.bean.FlatProDestination2">
+		<global>
+			<value name="user"/>
+		</global>
+		<attribute name="name" get="gName" set="sName"/>
+		<conversion name="fromDestConversion" from="name,surname,address,number" type="DYNAMIC" avoidSet="true">
+		   ${destination}.${source.set}(${source});
+		</conversion>
+		<conversion name="fromSourceConversion" from="user" type="DYNAMIC" avoidSet="true">
+		   ${destination} = ${source}.${destination.get}();
+		</conversion>
+	</class>
+</jmapper>
+}}}
+This mapping suppose that: 
+ - from Expand to Flatten the set method name it's the same for both
+ - from Flatten to Expand the get method name it's the same for both
