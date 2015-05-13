@@ -244,6 +244,13 @@ The dynamic conversion allows to pool the basic logic varying only some values.<
 ||${source.name}||source name||
 ||${destination.name}||destination name||
 
+*These placeholders were introduced with 1.3.2 version*
+
+||${destination.get}||destination get method name||
+||${destination.set}||destination set method name||
+||${source.get}||source get method name||
+||${source.set}||source set method name||
+
 annotation example:
 {{{
 @JMapConversion(from={"s1,s2,s3"}, to={"d1,d2,d3"}, type=Type.DYNAMIC)
