@@ -34,7 +34,7 @@ public class Flatten {
         //getter and setter..
 }
 }}}
-My purpose is to map Flatten in Expand and viceversa.<br>
+My purpose is to map Flatten in Encapsulate and viceversa.<br>
 With any mapper you are obliged to define every relationship, in this case:
 
 user.name = name<br>
