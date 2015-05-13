@@ -86,7 +86,7 @@ or in XML:
 </jmapper>
 }}}
 This mapping suppose that: 
- - from Flatten to Encapsulate the set method name it's the same for both
+ - from Flatten to Encapsulate the set method name it's the same for both<br>
  - from Encapsulate to Flatten the fet method name it's the same for both
 
 with these precautions you can add new fields without having to put hands to the configuration
