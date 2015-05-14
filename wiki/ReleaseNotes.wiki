@@ -4,7 +4,7 @@
 
 With this relase it's possible to use, in dynamic methods, the get and set placeholder for destination: {{{${destination.get}}}}, {{{${destination.set}}}} and for source: {{{${source.get}}}}, {{{${source.set}}}}.
 
-This placeholder permits to implement flatten and projection function easily.
+This placeholder permits to implement the flatten and projection functions easily.
 == 1.3.1 - 17 April 2015 ==
 *class parameter in JMapAccessor*
 
