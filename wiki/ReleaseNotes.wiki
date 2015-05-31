@@ -1,6 +1,7 @@
 = Release Notes =
 == 1.3.3 - 31 May 2015 ==
 *regex function added*
+
 Now it's possible use regex to identify fields.
 == 1.3.2 - 13 May 2015 ==
 *added the get and set placeholder*
