@@ -9,6 +9,10 @@ public class Encapsulate {
 
 	private User user;
 	
+        public Encapsulate(){
+           user = new User();
+        }
+
         // getter and setter..
 
 	public static class User {
