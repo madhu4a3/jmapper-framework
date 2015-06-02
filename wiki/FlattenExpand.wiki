@@ -60,9 +60,9 @@ public class Flatten {
 		return "${destination}.${source.set}(${source});";
 	}
 	
-	@JMapConversion(from={"user"},type=Type.DYNAMIC,avoidSet=true)
+	@JMapConversion(from={"user"},type=Type.DYNAMIC)
 	public static String fromSourceConversion(){
-		return "${destination} = ${source}.${destination.get}();";
+		return "return ${source}.${destination.get}();";
 	}
 
         //getter and setter..
