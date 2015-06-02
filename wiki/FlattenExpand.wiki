@@ -83,8 +83,8 @@ or in XML:
 		<conversion name="fromFlatten" from="name,surname,address,number" type="DYNAMIC" avoidSet="true">
 		   ${destination}.${source.set}(${source});
 		</conversion>
-		<conversion name="fromEncapsulate" from="user" type="DYNAMIC" avoidSet="true">
-		   ${destination} = ${source}.${destination.get}();
+		<conversion name="fromEncapsulate" from="user" type="DYNAMIC">
+		   return ${source}.${destination.get}();
 		</conversion>
 	</class>
 </jmapper>
