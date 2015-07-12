@@ -1,0 +1,5 @@
+#summary jmapper-core repository.
+
+= JMapper Framework is now hosted on Github! =
+
+For updated source fork the [https://github.com/jmapper-framework/jmapper-core jmapper-core] repo.
