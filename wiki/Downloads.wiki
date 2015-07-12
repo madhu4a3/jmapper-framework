@@ -1,0 +1,5 @@
+#summary getting-started repository.
+
+= JMapper Framework is now hosted on Github! =
+
+For updated examples fork the [https://github.com/jmapper-framework/getting-started getting-started] repo.
