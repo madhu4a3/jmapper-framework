@@ -1,9 +1,9 @@
 = Release Notes =
 == 1.3.3.1 - 21 July 2015 ==
 some bug fixed:
- - NPE when XML path is wrong
- - recursive mapping Object/List/List doesn't work
- - bug in getGenericString method of ClassesManager class
+ * NPE when XML path is wrong
+ * recursive mapping Object/List/List doesn't work
+ * bug in getGenericString method of !ClassesManager class
 
 For more info go to the [https://github.com/jmapper-framework/jmapper-core/issues?q=milestone%3A1.3.3.1+is%3Aclosed issues] page.
 == 1.3.3 - 31 May 2015 ==
