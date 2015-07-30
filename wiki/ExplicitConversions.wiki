@@ -38,7 +38,7 @@ And an example in XML:
   </class>
   <class name="com.application.Source">
     <conversion name="conversion">
-		return str;
+		return ${source};
     </conversion>
   </class>
 </jmapper>
